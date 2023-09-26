@@ -1,0 +1,198 @@
+:root {
+	--color-blue: hsla(200,100%,25%,1);
+	--color-orange: hsla(36,73%,54%,1);
+	--color-white: hsla(0,100%,100%,1);
+}
+
+/* Global Styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 16px;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+main {
+	width: min(90ch, 100% - 2rem);
+	margin-inline: auto;
+}
+
+img, picture, svg, video {
+	display: block;
+    max-width: 100%;
+}
+
+.blue {
+	color: var(--color-blue);
+}
+
+.orange {
+	color: var(--color-orange);
+}
+
+.white {
+	color: var(--color-white);
+}
+
+#background-image {
+    position: fixed;
+    z-index: -10;
+    height: 100vh;
+	height: 100svh;
+    width: 100%;
+    background-image: url(../img/Bridgeway_Holdings_Hero.jpg);
+	background-position: center;
+	background-size: cover;
+}
+
+/* Navigation Header */
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 4rem;
+}
+
+nav img {
+	height: 8rem;
+	width: auto;
+}
+
+/* Button Style */
+.button-link {
+	display: inline-block;
+	padding: 0.75rem 1.5rem;
+	margin: 0.75rem;
+	font-family: 'Work Sans', sans-serif;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1.2rem;
+	font-weight: 500;
+	letter-spacing: 0.1rem;
+	color: var(--color-white);
+	background-color: var(--color-orange);
+	border-radius: 4px;
+}
+
+.button-link:hover {
+	background-color: hsla(36,73%,40%,1);
+}
+
+.button-link:active {
+	box-shadow: inset 0px 0px 6px black;
+}
+
+/* Footer Styles */
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	font-size: 1.15rem;
+	background-color: hsla(200,100%,15%,1);
+	padding: 0.5rem 5rem;
+    margin-top: 2rem;
+}
+
+footer a {
+	text-decoration: none;
+	padding-left: 1rem;
+}
+
+/* Home Page */
+#home-banner {
+	margin-top: 8%;
+	margin-inline: auto;
+}
+
+#home-banner h1 {
+	position: absolute;
+	left: -1000%;
+}
+
+#home-banner h2 {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 3.5rem;
+	font-weight: 700;
+	letter-spacing: .2rem;
+	padding-inline: 1rem;
+	padding-bottom: 0.25rem;
+	margin-bottom: 1rem;
+	background-color: hsla(200,100%,15%,1);
+	display: inline-block;
+}
+
+#home-banner h3 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.65rem;
+	font-weight: 200;
+	font-style: italic;
+	padding: 1.5rem 3rem;
+}
+
+#home-banner a {
+	margin: 1.5rem 3rem;
+}
+
+/* Learn Page */
+.faqMenu {
+	margin-top: 5%;
+    margin-bottom: 12%;
+    user-select: none;
+}
+
+.faqLabel {
+	position: relative;
+	padding: 15px;
+	cursor: pointer;
+	color: white;
+	background-color: hsla(200,100%,15%,1);
+	font-size: 1.5rem;
+	border-bottom: solid hsla(200,100%,85%,1) 1px;
+}
+
+.faqLabel::after {
+	content: '+';
+	color: var(--color-orange);
+	font-weight: 900;
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	transform: translateY(-50%);
+	font-size: 2.5rem;
+}
+
+.faqContent {
+	position: relative;
+	height: 0;
+	overflow: hidden;
+	transition: 0.5s;
+	padding-inline: 20px;
+	background-color: hsla(200,100%,85%,1);
+	font-size: 1.15rem;
+	line-height: 1.75rem;
+	letter-spacing: 1.1px;
+	border-radius: 0 0 3px 3px;
+}
+
+.faqContent ul {
+	padding-top: 10px;
+	padding-left: 20px;
+}
+
+.faqContainer.active .faqContent {
+	padding-block: 10px;
+	margin-bottom: 4px;
+	height: auto;
+}
