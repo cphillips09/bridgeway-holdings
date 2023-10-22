@@ -107,7 +107,6 @@ a:focus {
     position: fixed;
     z-index: -10;
     height: 100vh;
-	height: 100svh;
     width: 100%;
     background-image: url(../img/Bridgeway_Holdings_Hero.jpg);
 	background-position: center;
