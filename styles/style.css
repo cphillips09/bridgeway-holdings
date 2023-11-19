@@ -286,6 +286,11 @@ footer a {
     background-repeat: no-repeat;
 }
 
+.light {
+    background-color: var(--clr-text-body);
+    border: solid 4px var(--clr-secondary);
+}
+
 .testimonial {
     font-family: var(--ff-base);
     font-size: var(--fs-300);
